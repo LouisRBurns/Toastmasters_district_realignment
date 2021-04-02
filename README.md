@@ -63,3 +63,7 @@ Run the post processing for divisions:
 `python district_postprocessing_divisions.py`
 
 Inspect the resulting files. Get feedback and make adjustments as needed. 
+
+## Notebooks
+
+If you would like to see how individual steps were accomplished, my Jupyter Notebooks have been included.
