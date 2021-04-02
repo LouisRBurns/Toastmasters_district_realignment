@@ -9,6 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import time
+import pickle
 
 from ga_division_functions import AreaAlignment
 

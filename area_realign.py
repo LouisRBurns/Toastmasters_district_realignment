@@ -9,6 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import time
+import pickle
 
 from ga_area_functions import DistrictRealignment
 
@@ -102,7 +103,6 @@ def main():
 
     with open('../data/best_areas_index.pkl', 'wb') as f:  
         pickle.dump(best, f)
-
 
 if __name__ == "__main__":
     main()
