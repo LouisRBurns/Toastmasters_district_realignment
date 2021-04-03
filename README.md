@@ -20,7 +20,7 @@ Likewise, divisions are ideally 5 areas. This makes for reasonably-lengthed cont
 
 Most divisions nominally have around 200 clubs plus or minus. In the past, realignment was done on paper with committee members circling groups of 4-6 clubs on a map based on who knew what about the strength of the clubs and their relationships. 
 
-Clubs are grouped into areas. Areas are grouped into divisions. Divisions make up the district. 
+Clubs are grouped into areas. Areas are grouped into divisions. Divisions make up the district. For 200 clubs, that would be 40 areas and 8 divisions. When the number isn't divisible by 5, we count from the end to make sure the remainder areas and divisions have 4. 
 
 Grouping clubs and areas are both similar to the Vehicle Routing Problem which is a special case of the Traveling Salesman Problem which is an NP-hard combinatorial optimization problem. Each level - areas and divisions - can be optimized through genetic algorithms. Here, I use the Python DEAP module on geocoded zip codes. 
 
