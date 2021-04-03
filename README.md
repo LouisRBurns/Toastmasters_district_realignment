@@ -66,4 +66,4 @@ Inspect the resulting files. Get feedback and make adjustments as needed.
 
 ## Notebooks
 
-If you would like to see how individual steps were accomplished, my Jupyter Notebooks have been included.
+If you would like to see how individual steps were accomplished, my Jupyter Notebooks have been included. Also, `assignment_functions.py`, `calculate_centroids.py`, and `grouping_functions.py` can be imported for use in Notebooks. 
