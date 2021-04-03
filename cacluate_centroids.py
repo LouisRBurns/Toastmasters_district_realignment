@@ -15,12 +15,18 @@ import pickle
 import geopandas as gpd
 import sys
 
-# Import clubs from command line argument
-clubs = pd.read_csv(sys.argv[0])
+def main():
+    # Import clubs from command line argument
+    clubs = pd.read_csv(sys.argv[0])
 
-# Create area centroids
-area_centroids = clubs.drop('club_no', axis=1).groupby('area').mean()
+    # Create area centroids
+    area_centroids = clubs.drop('club_no', axis=1).groupby('area').mean()
 
-# Export for division formation
-with open('data/area_centroids.pkl', 'wb') as f:  
-    pickle.dump(area_centroids, f)
+    # Export for division formation
+    with open('data/area_centroids.pkl', 'wb') as f:  
+        pickle.dump(area_centroids, f)
+    
+    print('Centroids calculated and exported to area_centroids.pkl.')
+
+if __name__ == "__main__":
+    main()
