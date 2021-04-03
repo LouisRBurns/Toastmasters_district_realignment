@@ -38,7 +38,7 @@ The initial input is a csv file that has column headers "Club" which is the club
 
 Run the prepocessing file (insert your club file):
 
-`python district_preprocessing <clubs.raw>`
+`python district_preprocessing <clubs_raw.csv>`
 
 Confirm you see the number of results you were expecting.
 
@@ -52,7 +52,7 @@ Run the area post processing script:
 
 Inspect the shapefiles in ArcGIS (paid) or QGIS (free). Make any needed adjustments to the csv file. If you do, make sure to recalculate the area centroids needed for the next step:
 
-`python caluculate_centroids.py`
+`python caluculate_centroids.py <clubs_adjusted.csv>`
 
 Run the genetic algorithm for divisions:
 
