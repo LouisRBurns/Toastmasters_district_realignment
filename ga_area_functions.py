@@ -52,7 +52,7 @@ class DistrictRealignment:
         except (OSError, IOError):
             pass
 
-        if not self.locations or self.distances:
+        if not (len(self.locations) > 0) or (len(self.distances) > 0):
             print("Data not previously serialized. Creating now.")
             self.__create_data()
 
@@ -67,7 +67,7 @@ class DistrictRealignment:
         This serializes the locations and 
         distances for algorithm use.
         '''
-        df = pd.read_csv('clubs_zips.csv')
+        df = pd.read_csv('club_zips.csv')
         self.locations = [np.asarray([row[4], row[3]], dtype='float32') \
                             for row in df.itertuples()]
         

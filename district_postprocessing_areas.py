@@ -6,10 +6,10 @@ from grouping_functions import select_grouping_function
 from assignment_functions import select_assignment_function
 
 # Load area index and locations
-with open('../data/best_areas_index.pkl', 'rb') as f:  
+with open('data/best_areas_index.pkl', 'rb') as f:  
     best_index = pickle.load(f)
 
-with open('../data/loc.pickle', 'rb') as f:  
+with open('data/loc.pickle', 'rb') as f:  
     loc = pickle.load(f)
 
 # Convert to dataframe for merging
@@ -31,7 +31,7 @@ except (OSError, IOError):
 
 # Join areas to clubs
 best_dist = old_clubs.join(bdf).sort_values(['area', 'club_no']).reset_index(drop=True)
-best_dist.to_csv('../data/area_clubs.csv', index = False)
+best_dist.to_csv('data/area_clubs.csv', index = False)
 print('area_clubs.csv created.')
 
 # Create area centroids
@@ -46,7 +46,7 @@ g_clubs = gpd.GeoDataFrame(best_dist,
                            geometry=gpd.points_from_xy(best_dist.long, best_dist.lat),
                            crs="EPSG:4326")
 
-g_clubs.to_file('../data/clubs_with_areas.shp')
+g_clubs.to_file('data/clubs_with_areas.shp')
 print('clubs_with_areas.shp created.')
 
 # Dissolve groups the points into single objects which are a list of points
@@ -57,7 +57,7 @@ area_poly = areas.convex_hull.buffer(0.02)
 area_boundaries = area_poly.boundary
 
 # Export these for manual inspection
-area_boundaries.to_file('../data/area_boundaries.shp')
+area_boundaries.to_file('data/area_boundaries.shp')
 
 print('area_boundaries.shp created.')
 print()

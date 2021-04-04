@@ -40,17 +40,19 @@ Run the prepocessing file (insert your club file):
 
 `python district_preprocessing <clubs_raw.csv>`
 
+I found unexpected behavior with the `zipcodes` module (at least to me). See the issues on how to resolve unknown zip codes. 
+
 Confirm you see the number of results you were expecting.
 
 Run the genetic algorithm for the areas:
 
-`python area_alignment.py`
+`python area_realign.py`
 
 Run the area post processing script:
 
-`python district_post_processing_areas.py`
+`python district_postprocessing_areas.py`
 
-Inspect the shapefiles in ArcGIS (paid) or QGIS (free). Make any needed adjustments to the csv file. If you do, make sure to recalculate the area centroids needed for the next step:
+Inspect the shapefiles in Carto (free), ArcGIS (paid), or QGIS (free). Make any needed adjustments to the csv file. If you do, make sure to recalculate the area centroids needed for the next step:
 
 `python caluculate_centroids.py <clubs_adjusted.csv>`
 

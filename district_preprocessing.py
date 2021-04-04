@@ -33,8 +33,8 @@ def import_club_zips(filename):
 def geocode_dataframe(df):
     '''This takes in a dataframe and geocodes it using the zip code
        which can be either a string or an integer.'''
-    df['lat'] = [zipcodes.matching(i)[0]['lat'] for i in df['zip']]
-    df['long'] = [zipcodes.matching(i)[0]['long'] for i in df['zip']]
+    df['lat'] = [zipcodes.matching[i][0]['lat'] for i in df['zip']]
+    df['long'] = [zipcodes.matching[i][0]['long'] for i in df['zip']]
     df['long'] = df['long'].astype(float)
     df['lat'] = df['lat'].astype(float)
     

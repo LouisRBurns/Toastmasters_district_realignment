@@ -94,7 +94,7 @@ def main():
     # show both plots:
     plt.show()
 
-    with open('../data/best_divisions_index.pkl', 'wb') as f:  
+    with open('data/best_divisions_index.pkl', 'wb') as f:  
         pickle.dump(best, f)
 
 if __name__ == "__main__":
